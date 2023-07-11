@@ -7,7 +7,7 @@ const exec = promisify(require('child_process').exec);
 const cors = require('cors');
 
 const app = express();
-const port = 8080;
+const port = 4200;
 
 app.use(cors({
     origin: '*'
@@ -54,5 +54,5 @@ app.get('/generate-sbom/:image', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${host}:${port}`);
+  console.log(`Server is running on port : ${port}`);
 });
