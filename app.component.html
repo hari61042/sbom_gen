@@ -1,0 +1,32 @@
+<div >
+  <form method="post">
+    <div class="ui container center aligned">
+      <h2 style="color:black;">Image Name</h2><br />
+    </div>
+    
+    <input style="margin-left: 5%;"
+      [(ngModel)]="imageName" type="text" name="u" placeholder="Docker Image Name"/><br />
+    <div class="center">
+      <button class="button button4" type="submit" (click)="generateSBOM()">
+        Generate Report
+      </button>
+    </div>
+    
+  </form>
+</div>
+
+
+<h2 *ngIf="response" style="color:black; margin-left: 10%;">Report</h2><br />
+<div *ngIf="response" style=" margin-left: 5%;width: 90%; border: 1px solid black; border-radius: .5rem;" class="ui container left aligned">
+  
+  <pre style="margin-left:0%;">{{ response | json }}</pre>
+</div>
+
+<!-- <section class="webdesigntuts-workshop">
+	<form  method="post">		    
+		<input  [(ngModel)]="imageName" type="text" name="u" placeholder="What are you looking for?">		    	
+		<button type="submit"  (click)="generateSBOM()">Search</button>
+	</form>
+</section> -->
+
+<!-- type="submit" class="btn btn-primary btn-block btn-large" (click)="generateSBOM()" -->
